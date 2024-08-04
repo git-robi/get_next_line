@@ -175,8 +175,11 @@ char	*get_next_line(int fd)
 	static t_list	*list;
 	int		line_len;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0))
+	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) || read(fd, 0, 0) == -1)
+	{
+		free_all(&list);
 		return (NULL);
+	}
 	line_len = 0;
 	read_and_putnode(fd, &list);
 	if (list == NULL)
