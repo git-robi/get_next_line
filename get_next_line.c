@@ -194,6 +194,6 @@ char	*get_next_line(int fd)
 	fill_line(list, line, line_len);
 	reset_list(&list);
 	if (list->content[0] == '\0')
-		list = NULL;
+		free_all(&list);
 	return (line);
 }
