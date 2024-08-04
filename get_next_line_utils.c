@@ -65,7 +65,7 @@ void	free_all(t_list **list)
 	t_list	*current;
 	t_list	*tmp;
 
-	if(!list)
+	if(!list || !*list)
 		return ;
 	current = *list;
 	while (current->next)
