@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rgiambon <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/06 11:21:59 by rgiambon          #+#    #+#             */
+/*   Updated: 2024/08/06 11:25:17 by rgiambon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line_bonus.h"
 
 void	fill_new_list(t_list *tmp, t_list *new_list)
@@ -31,7 +43,7 @@ void	fill_new_list(t_list *tmp, t_list *new_list)
 
 void	reset_list(t_list **list)
 {
-	int	i;
+	int		i;
 	t_list	*tmp;
 	t_list	*new_list;
 
@@ -83,9 +95,9 @@ void	remove_last_node(t_list **list)
 
 void	fill_line(t_list *list, char *line, int line_len)
 {
-	int	i;
-	int	j;
-	t_list		*tmp;
+	int		i;
+	int		j;
+	t_list	*tmp;
 
 	tmp = list;
 	j = 0;

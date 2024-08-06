@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rgiambon <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/06 11:20:45 by rgiambon          #+#    #+#             */
+/*   Updated: 2024/08/06 11:23:27 by rgiambon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 t_list	*add_new_node(t_list **list, int is_new_list)
@@ -29,7 +41,7 @@ t_list	*add_new_node(t_list **list, int is_new_list)
 
 int	new_line(t_list **list)
 {
-	int	i;
+	int		i;
 	t_list	*node;
 
 	if (!*list)
@@ -102,9 +114,9 @@ int	count_len(t_list **list)
 
 char	*get_next_line(int fd)
 {
-	char		*line;
-	static t_list		*list;
-	int			line_len;
+	char			*line;
+	static t_list	*list;
+	int				line_len;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) || read(fd, 0, 0) == -1)
 	{
