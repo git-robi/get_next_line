@@ -62,7 +62,7 @@ int	new_line(t_list **list)
 	return (0);
 }
 
-int	read_and_putnode(int fd, t_list **list)
+void	read_and_putnode(int fd, t_list **list)
 {
 	t_list	*new_node;
 	int		bytes;
@@ -74,16 +74,15 @@ int	read_and_putnode(int fd, t_list **list)
 		if (!new_node)
 		{
 			free_all(list);
-			return (0);
+			return ;
 		}
 		new_node->next = NULL;
 		bytes = read(fd, new_node->content, BUFFER_SIZE);
 	}
 	if (bytes == -1)
-		list[fd] = NULL;
+		free_all(list);
 	if (bytes == 0)
 		remove_last_node(list);
-	return (bytes);
 }
 
 int	count_len(t_list **list)
@@ -115,11 +114,10 @@ char	*get_next_line(int fd)
 	static t_list	*list[OPEN_MAX];
 	int				line_len;
 
-	if (fd < 0 || fd >= OPEN_MAX || read(fd, 0, 0) == -1 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd >= OPEN_MAX || BUFFER_SIZE <= 0)
 		return (NULL);
 	line_len = 0;
-	if (read_and_putnode(fd, &list[fd]) == -1)
-		free_all(&list[fd]);
+	read_and_putnode(fd, &list[fd]);
 	if (list[fd] == NULL)
 		return (NULL);
 	line_len = count_len(&list[fd]);

@@ -80,13 +80,9 @@ void	read_and_putnode(int fd, t_list **list)
 		bytes = read(fd, new_node->content, BUFFER_SIZE);
 	}
 	if (bytes == -1)
-	{
 		free_all(list);
-	}
 	if (bytes == 0)
-	{
 		remove_last_node(list);
-	}
 }
 
 int	count_len(t_list **list)
@@ -118,11 +114,8 @@ char	*get_next_line(int fd)
 	static t_list	*list;
 	int				line_len;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) || read(fd, 0, 0) == -1)
-	{
-		free_all(&list);
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	}
 	line_len = 0;
 	read_and_putnode(fd, &list);
 	if (list == NULL)
