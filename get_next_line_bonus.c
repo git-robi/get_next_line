@@ -129,6 +129,8 @@ char	*get_next_line(int fd)
 	}
 	fill_line(list[fd], line, line_len);
 	reset_list(&list[fd]);
+	if (list[fd] == NULL)
+		return (NULL);
 	if (list[fd]->content[0] == '\0')
 		free_all(&list[fd]);
 	return (line);
