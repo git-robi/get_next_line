@@ -1,7 +1,6 @@
 # 📚 get_next_line - Reading Files Line by Line
 
-Hey there! 👋 Welcome to my get_next_line project. Let me tell you about this fascinating journey of creating a function that reads files line by line.
-
+Hey there! 👋 Welcome to my get_next_line project.
 ## 🎯 What's This Project About?
 
 Ever wondered how programs read files line by line? Well, that's exactly what I built here! The challenge was to create a function that:
