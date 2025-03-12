@@ -4,7 +4,7 @@ Hey there! 👋 Welcome to my get_next_line project.
 ## 🎯 What's This Project About?
 
 Ever wondered how programs read files line by line? Well, that's exactly what I built here! The challenge was to create a function that:
-- Reads a line from a file descriptor (could be a file, standard input, or even a network socket!)
+- Reads a line from a file descriptor
 - Returns that line as a string
 - Works repeatedly - each call gives you the next line
 - Handles different buffer sizes efficiently
