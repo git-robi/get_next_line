@@ -12,7 +12,7 @@ Ever wondered how programs read files line by line? Well, that's exactly what I 
 
 ## 🛠️ How I Built It
 
-I tackled this project with a linked list approach, which turned out to be pretty clever! Here's how it works:
+I tackled this project with a linked list approach. Here's how it works:
 
 1. **The Core Structure**: 
    - Created a linked list where each node stores a chunk of the file (size defined by BUFFER_SIZE)
