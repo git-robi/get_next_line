@@ -1,16 +1,16 @@
 # 📚 get_next_line - Reading Files Line by Line
 
-Hey there! 👋 Welcome to my get_next_line project.
-## 🎯 What's This Project About?
+Hey there! Welcome to my get_next_line project.
+## What's This Project About?
 
-Ever wondered how programs read files line by line? Well, that's exactly what I built here! The challenge was to create a function that:
+The challenge was to create a function that:
 - Reads a line from a file descriptor
 - Returns that line as a string
 - Works repeatedly - each call gives you the next line
 - Handles different buffer sizes efficiently
 - Works with both regular and bonus features (like handling multiple file descriptors)
 
-## 🛠️ How I Built It
+## How I Built It
 
 I tackled this project with a linked list approach. Here's how it works:
 
@@ -29,7 +29,7 @@ I tackled this project with a linked list approach. Here's how it works:
    - Used a static variable to remember our position between function calls
    - Made sure there are no memory leaks!
 
-## 🤔 The Tricky Parts
+## The Tricky Parts
 
 Developing get_next_line presented me with several intricate challenges that pushed my programming skills to new levels.
 
@@ -42,20 +42,20 @@ I encountered a wide range of edge cases that required careful consideration. My
 ### Static Variable Management
 Perhaps the most interesting technical challenge was effectively utilizing static variables. I needed to maintain state between function calls while ensuring the static variable wouldn't cause issues when handling multiple files. This required careful design to prevent data corruption or memory leaks while preserving the function's ability to handle multiple file descriptors simultaneously.
 
-## 🎓 What I learned
+## What I learned
 
 This project significantly deepened my understanding of low-level file operations and data management.
 
-### File Operation Mastery
+### File Operation 
 I gained a profound understanding of how file reading works at a low level. Working directly with file descriptors and implementing buffered reading taught me valuable lessons about system I/O operations. This hands-on experience gave me insights into file handling that I couldn't have gained from using high-level functions alone.
 
 ### Data Structure Implementation
 Implementing my own linked list structure for buffer management proved to be an invaluable learning experience. I learned to effectively use static variables for state management while maintaining clean memory handling. This practical experience helped me understand when different data structures are most appropriate and how to implement them efficiently.
 
 ### Code Architecture Skills
-The project taught me valuable lessons in code organization and problem-solving. I learned to break down complex file reading operations into manageable components while maintaining clean, maintainable code. My error handling became more robust as I developed strategies for gracefully managing various edge cases.
+The project taught me valuable lessons in code organization and problem-solving. I learned to break down complex file reading operations into manageable components while maintaining clean, maintainable code. My error handling became more robust as I developed strategies for managing various edge cases.
 
-## 💡 How to Use It
+## How to Use It
 
 ```c
 #include "get_next_line.h"
@@ -75,18 +75,18 @@ int main()
 }
 ```
 
-### 🚀 Bonus Features
+### Bonus Features
 
-I also implemented some cool bonus features:
+I also implemented some bonus features:
 - Handling multiple file descriptors simultaneously
 - Using a single static variable
 - Same smooth performance with different BUFFER_SIZE values
 
-## 🔍 Final Thoughts
+## Final Thoughts
 
 This project really opened my eyes to how file I/O works at a lower level. It's one thing to use `fgets` or similar functions, but building this from scratch gave me a whole new appreciation for file handling in C.
 
-The skills I learned here - especially about memory management and linked lists - have been super helpful in later projects. Plus, now I have my own function for reading files line by line! 😎
+The skills I learned here - especially about memory management and linked lists - have been super helpful in later projects. Plus, now I have my own function for reading files line by line! 
 
 ---
 *Built with ❤️ and lots of coffee at 42 School*
